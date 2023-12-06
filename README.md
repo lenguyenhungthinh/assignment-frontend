@@ -41,6 +41,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 1. [Folder](###folder)
 1. [Commit Rules](###commit)
 
+
 ### Basic Rules
 
 - Only include one React component per file.
