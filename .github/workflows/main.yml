@@ -37,4 +37,4 @@ jobs:
 
     - name: Push Docker Image to Artifact Registry
       run: |
-        docker push gcr.io/sinuous-axiom-390804/assignment-frontend:${{ github.sha }}
+        docker push asia-southeast1-docker.pkg.dev/sinuous-axiom-390804/assignment-frontend:${{ github.sha }}
