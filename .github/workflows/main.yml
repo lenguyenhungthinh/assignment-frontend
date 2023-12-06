@@ -22,7 +22,7 @@ jobs:
       run: npm install
 
     - name: Build Docker Image
-      run: docker build -t asia-southeast1-docker.pkg.dev/sinuous-axiom-390804/assignment-frontend:${{ github.sha }} .
+      run: docker build -t asia-southeast1-docker.pkg.dev/sinuous-axiom-390804/assignment-frontend/assignment-frontend:${{ github.sha }} .
 
     - id: 'auth'
       name: 'Authenticate to Google Cloud'
@@ -37,4 +37,4 @@ jobs:
 
     - name: Push Docker Image to Artifact Registry
       run: |
-        docker push asia-southeast1-docker.pkg.dev/sinuous-axiom-390804/assignment-frontend:${{ github.sha }}
+        docker push asia-southeast1-docker.pkg.dev/sinuous-axiom-390804/assignment-frontend/assignment-frontend:${{ github.sha }}
