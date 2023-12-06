@@ -1,0 +1,67 @@
+{
+  "extends": ["next", "next/core-web-vitals", "eslint:recommended", "plugin:react/recommended", "plugin:@typescript-eslint/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint"],
+  "rules": {
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "class",
+        "format": ["PascalCase"]
+      },
+      {
+        "selector": "interface",
+        "format": ["PascalCase"]
+      },
+      {
+        "selector": "typeAlias",
+        "format": ["PascalCase"]
+      }
+    ],
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-uses-react": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/prefer-nullish-coalescing": "warn",
+    "@typescript-eslint/prefer-optional-chain": "warn",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "varsIgnorePattern": "^_"
+      }
+    ],
+    "no-console": "warn",
+    "no-alert": "warn",
+    "eqeqeq": "error",
+    "no-var": "error",
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"]
+  },
+  "ignorePatterns": [
+    "commitlint.config.js",
+    ".next",
+    "coverage",
+    "node_modules",
+    "next.config.js",
+    "jest.config.js",
+    "jest.setup.js",
+    "cypress/plugins/index.js",
+    "public/mockServiceWorker.js",
+    "babel.config.js",
+    "tailwind.config.js",
+    "postcss.config.js",
+    "src/modules/e-finance/api/mock/server.ts",
+    "index.js"
+  ]
+}
