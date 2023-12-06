@@ -7,8 +7,7 @@ WORKDIR /app
 
 # Install dependencies based on the preferred package manager
 COPY package.json package-lock.json ./
-COPY .npmrc ./
-RUN --mount=type=secret,id=npmrc,target=/root/.npmrc npm ci
+RUN npm ci
 
 
 
