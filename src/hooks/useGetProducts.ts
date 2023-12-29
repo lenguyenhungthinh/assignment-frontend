@@ -1,4 +1,4 @@
-import { getProducts } from '@/api/rest/getProducts';
+import { getProducts } from '@/api/rest/getProduct';
 import Product from '@/types/product.type';
 import { useAppQuery } from '@/utils/hooks/useAppQuery';
 
