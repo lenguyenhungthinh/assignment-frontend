@@ -1,8 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { NextApiRequest } from 'next';
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 
-export async function GET(req: NextApiRequest) {
+export async function GET(req: NextRequest) {
   const apiUrl =  process.env.API_URL;
   // Extract the full URL path from req.url
   const fullPath = req.url ?? '';
@@ -20,8 +19,6 @@ export async function GET(req: NextApiRequest) {
     throw new Error('API_URL is not set');
   }
   const results = await getDataFromServer(apiUrl + '/' + path);
-  console.log(results);
-
   return NextResponse.json(results);
 }
 
