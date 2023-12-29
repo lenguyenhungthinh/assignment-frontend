@@ -59,7 +59,7 @@ jobs:
         GCP_IMAGE_NAME="asia-southeast1-docker.pkg.dev/sinuous-axiom-390804/assignment-frontend/assignment-frontend:${{ github.sha }}"
         REPO_PATH="apps/front-end/overlays/dev"
         cd ${REPO_PATH}
-        kustomize edit set image deployment-image=front-end
+        kustomize edit set image front-end=${GCP_IMAGE_NAME}
         git add .
         git commit -m "Update image tag to `${{ github.sha }}`"
         git push
